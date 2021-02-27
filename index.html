@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Red Tigo</title>
+</head>
+<body>
+    <h1>Red Tigo Guatemala</h1>
+    <p>Registro de tu servicio</p>
+	<h1>Bienvenido</h1>
+	<h3 id="nombres"></h3>
+	<h1>Lugar de recidencia</h1>
+	<h3 id="Lugar"></h3>
+	<h1>Beneficio</h1>
+	<h3 id="costo"></h3>
+
+<script>
+	var nombre = prompt("ingrese su nombre");
+	var apellidos = prompt("ingrese el apellido");
+	var Lugar = prompt("ingrese su recidencia");
+	var cantidad = prompt("Pago del servicio:");
+	cantidad = parseInt(cantidad);
+	var desct  =5* 25 / 100;
+
+	   document.getElementById('nombres').innerHTML =(nombre + " " + apellidos);
+	   document.getElementById('Lugar').innerHTML =(Lugar); 
+	   //document.getElementById('costo').innerHTML =(desct);
+
+
+if (cantidad >= 1000) {
+    document.getElementById('costo').innerHTML =("Por adquirir el servicio especial tigo Q" + cantidad + " es un ganador de un Iphone 11");
+    }
+
+else if (cantidad >= 250) {
+    document.getElementById('costo').innerHTML =("Por pago al tiempo en su servicio incluye 5GB extras de velociddad");
+    }
+
+else if (cantidad >= 100) {
+    document.getElementById('costo').innerHTML =("al pagar Q" + cantidad + " Su descuento es de Q" + desct + "");
+    }
+
+else{
+window.alert("La cantidad ingresada no es valida");
+}
+
+
+</script>
+</body>
+</html>
